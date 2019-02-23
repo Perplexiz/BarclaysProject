@@ -11,9 +11,9 @@ export class AppComponent {
     title = 'app';
 
     columnDefs = [
-      {headerName: 'Make', field: 'make', sortable: true, filter: true, editable: true},
-      {headerName: 'Model', field: 'model', sortable: true, filter: true, editable: true},
-      {headerName: 'Price', field: 'price', sortable: true, filter: true, editable: true}
+      {headerName: 'Make', field: 'make', sortable: true, filter: true, editable: true, resizable: true, pinned: "left",rowDrag: true},
+      {headerName: 'Model', field: 'model', sortable: true, filter: true, editable: true, resizable: true, pinned: "left",rowDrag: true},
+      {headerName: 'Price', field: 'price', sortable: true, filter: true, editable: true, resizable: true, pinned: "left",rowDrag: true}
   ];
   
     rowData = [
