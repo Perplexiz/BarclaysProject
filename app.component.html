@@ -4,17 +4,37 @@
 
   </head>
   <body>
-    <p>
-      Chart
-    </p>
+    <h1>
+      Data Table Using
+    </h1>
+    <img src="https://www.ag-grid.com/xavier-analytics/assets/images/angular-grid.svg" width="1000" height="100" alt="">
+    
   </body>
 </html>
+<style type="text/css">
+  
+  h1 {
+    color: rgb(255, 255, 255);
+  }
+
+  ag-grid-angular{ 
+
+    position: absolute;
+    top: 65%;
+    right: 32%;
+    transform: translateY(-50%);
+    text-align: left;
+  }
+  
+</style>
 <ag-grid-angular 
-    style="width: 500px; height: 500px;" 
-    class="ag-theme-balham-dark"
-    [rowData]="rowData"
-    
-    [columnDefs]="columnDefs"
-    >
+  style="width: 500px; height: 500px;" 
+  class="ag-theme-balham-dark"
+  [rowData]="rowData"
+  [columnDefs]="columnDefs"
+  [pagination]="true"
+  [rowDragManaged]="true"
+  [animateRows]="true">
 </ag-grid-angular>
+
 
