@@ -1,40 +1,84 @@
 <!--The content below is only a placeholder and can be replaced. | async-->
 <html>
-  <head>
-
-  </head>
+  <ul>
+      <li><a class="active" href="#home">Home</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
   <body>
     <h1>
       Data Table Using
     </h1>
+   
     <img src="https://www.ag-grid.com/xavier-analytics/assets/images/angular-grid.svg" width="1000" height="100" alt="">
-    
+    <ag-grid-angular 
+      style="width: 800px; height: 400px;" 
+      class="ag-theme-balham-dark"
+      [rowData]="rowData"
+      [columnDefs]="columnDefs"
+      [pagination]="true"
+      [rowDragManaged]="true"
+      [animateRows]="true">
+    </ag-grid-angular>
+    <p><marquee>
+      
+      Made by Aneesh Sharma, Chris Hamm, Malik Tragna, and Amanda Merino</marquee>
+      <input type="file" name="somename" size="n"> 
+    </p>
   </body>
+  
 </html>
 <style type="text/css">
   
   h1 {
     color: rgb(255, 255, 255);
   }
+  p{
+    color:white;
+  }
+  input{
+    position: absolute;
+    top: 47%;
+    right: 39%;
+    transform: translateY(-50%);
+    text-align: left;
+  }
+
 
   ag-grid-angular{ 
 
     position: absolute;
-    top: 65%;
-    right: 32%;
+    top: 80%;
+    right: 21%;
     transform: translateY(-50%);
     text-align: left;
   }
-  
+
+  ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
 </style>
-<ag-grid-angular 
-  style="width: 500px; height: 500px;" 
-  class="ag-theme-balham-dark"
-  [rowData]="rowData"
-  [columnDefs]="columnDefs"
-  [pagination]="true"
-  [rowDragManaged]="true"
-  [animateRows]="true">
-</ag-grid-angular>
+
 
 
