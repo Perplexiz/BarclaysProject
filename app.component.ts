@@ -11,15 +11,17 @@ export class AppComponent {
     title = 'app';
 
     columnDefs = [
-      {headerName: 'Make', field: 'make', sortable: true, filter: true, editable: true, resizable: true, pinned: "left",rowDrag: true},
-      {headerName: 'Model', field: 'model', sortable: true, filter: true, editable: true, resizable: true, pinned: "left",rowDrag: true},
-      {headerName: 'Price', field: 'price', sortable: true, filter: true, editable: true, resizable: true, pinned: "left",rowDrag: true}
+      {headerName: 'Make', field: 'make', sortable: true, filter: true, editable: true, resizable: true, pinned: "left", rowDrag: true},
+      {headerName: 'Model', field: 'model', sortable: true, filter: true, editable: true, resizable: true, pinned: "left", rowDrag: true},
+      {headerName: 'Govind', field: 'chari', sortable: true, filter: true, editable: true, resizable: true, pinned: "left", rowDrag: true},
+      {headerName: 'Price', field: 'price', sortable: true, filter: true, editable: true, resizable: true, pinned: "left", rowDrag: true}
   ];
-  
+    
     rowData = [
-        { make: 'Toyota', model: 'Celica', price: 35000 },
-        { make: 'Ford', model: 'Mondeo', price: 32000 },
-        { make: 'Porsche', model: 'Boxter', price: 72000 }
+        { make: 'Toyota', model: 'Celica', chari: 'Hi', price: 35000 },
+        { make: 'Ford', model: 'Mondeo',chari: 'Bye', price: 32000 },
+        { make: 'Black', model: 'Darajan',chari: 'Guy', price: 31000 },
+        { make: 'Porsche', model: 'Boxter',chari: 'Tie', price: 72000 }
     ];
 
     //rowData : any;
