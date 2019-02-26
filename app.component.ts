@@ -11,10 +11,10 @@ export class AppComponent {
     title = 'app';
 
     columnDefs = [
-      {headerName: 'Make', field: 'make', sortable: true, filter: true, editable: true, resizable: true, pinned: "left", rowDrag: true},
-      {headerName: 'Model', field: 'model', sortable: true, filter: true, editable: true, resizable: true, pinned: "left", rowDrag: true},
-      {headerName: 'Govind', field: 'chari', sortable: true, filter: true, editable: true, resizable: true, pinned: "left", rowDrag: true},
-      {headerName: 'Price', field: 'price', sortable: true, filter: true, editable: true, resizable: true, pinned: "left", rowDrag: true}
+      {headerName: 'Make', field: 'make', sortable: true, filter: true, editable: true, resizable: true, pinned: null},
+      {headerName: 'Model', field: 'model', sortable: true, filter: true, editable: true, resizable: true, pinned: null},
+      {headerName: 'Govind', field: 'chari', sortable: true, filter: true, editable: true, resizable: true, pinned: null},
+      {headerName: 'Price', field: 'price', sortable: true, filter: true, editable: true, resizable: true, pinned: null}
   ];
     
     rowData = [
