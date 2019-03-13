@@ -1,11 +1,11 @@
 <!--The content below is only a placeholder and can be replaced. | async-->
 <html>
   <ul>
-      <li><a class="active" href="home.html">Home</a></li>
-      <li><a href="#news">News</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#about">About</a></li>
-    </ul>
+    <li><a class="active" href="home.html">Home</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
   <body>
     <h1>
       Data Table Using
@@ -13,25 +13,49 @@
    
     <img src="https://www.ag-grid.com/xavier-analytics/assets/images/angular-grid.svg" width="1000" height="100" alt="">
     <ag-grid-angular 
-      style="width: 800px; height: 400px;" 
+      style="width: 1100px; height: 600px;" 
       class="ag-theme-balham-dark"
       [rowData]="rowData"
       [columnDefs]="columnDefs"
       [pagination]="true">
     </ag-grid-angular>
-    <p><marquee>
-      
-      Made by Aneesh Sharma, Chris Hamm, Malik Tragna, and Amanda Merino</marquee>
+    <p><marquee>Made by Aneesh Sharma, Chris Hamm, Malik Tragna, and Amanda Merino</marquee>
       <input type="file" name="somename" size="n"> 
+      <button id="buttonAddCol" class="btn btn-default" onclick="myFunction()">Add Column</button>
+      <script>
+        
+      </script>
     </p>
   </body>
   
 </html>
+<div class="test-header">
+  Page Size:
+  <select onchange="onPageSizeChanged()" id="page-size">
+      <option value="10" selected>10</option>
+      <option value="100">100</option>
+      <option value="500">500</option>
+      <option value="1000">1000</option>
+  </select>
+</div>
 <style type="text/css">
   
   h1 {
     color: rgb(255, 255, 255);
   }
+  div{
+    color: white;
+    position: absolute;
+    top: 52%;
+    right: 75%;
+    transform: translateY(-50%);
+    text-align: left;
+  }
+  .test-header {
+    padding: 4px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+}
   p{
     color:white;
   }
@@ -45,10 +69,9 @@
 
 
   ag-grid-angular{ 
-
     position: absolute;
-    top: 80%;
-    right: 21%;
+    top: 100%;
+    right: 10%;
     transform: translateY(-50%);
     text-align: left;
   }
