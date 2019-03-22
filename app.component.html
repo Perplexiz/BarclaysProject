@@ -1,31 +1,55 @@
 <!--The content below is only a placeholder and can be replaced. | async-->
 <html>
-  <ul>
-    <li><a class="active" href="home.html">Home</a></li>
-    <li><a href="#news">News</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#about">About</a></li>
-  </ul>
+  
+  <img src="https://www.ag-grid.com/xavier-analytics/assets/images/angular-grid.svg" width="500" height="50" alt="">
+  
+  
+
+  <style>
+    img{
+      position: absolute;
+      top: 5%;
+      right: 78%;
+      transform: translateY(-50%);
+      text-align: left;
+    }
+  </style>
   <body>
-    <h1>
-      Data Table Using
-    </h1>
    
-    <img src="https://www.ag-grid.com/xavier-analytics/assets/images/angular-grid.svg" width="1000" height="100" alt="">
+    
     <ag-grid-angular 
-      style="width: 1100px; height: 600px;" 
+      style="width: 1440px; height: 600px;" 
       class="ag-theme-balham-dark"
-      [rowData]="rowData"
       [columnDefs]="columnDefs"
+      [defaultColDef]="defaultColDef"
+      [rowData]="rowData"
+      [groupUseEntireRow]="false"
+      [enableRangeSelection]="true"
+      [autoGroupColumnDef]="autoGroupColumnDef"
+      [suppressAggFuncInHeader]="true"
+      [aggFuncs]="aggFuncs"
+      [sideBar]="true"
+      (firstDataRendered)="onFirstDataRendered($event)"
+      (gridReady)="onGridReady($event)"
       [pagination]="true">
     </ag-grid-angular>
-    <p><marquee>Made by Aneesh Sharma, Chris Hamm, Malik Tragna, and Amanda Merino</marquee>
-      <input type="file" name="somename" size="n"> 
-      <button id="buttonAddCol" class="btn btn-default" onclick="myFunction()">Add Column</button>
-      <script>
-        
-      </script>
+    <p>
+      <input type="file" name="somename" size="n"><br>
+      
     </p>
+    <form action="/action_page.php">
+      <div class="thing">
+      </div>
+      Column Name:<br>
+      <input type="text" name="columnName">
+      <br><br>
+      <input type="submit">
+    </form>
+    <script src="/functionCaller.js"></script>
+    
+    <p id="demo"></p>
+    
+    
   </body>
   
 </html>
@@ -38,6 +62,9 @@
       <option value="1000">1000</option>
   </select>
 </div>
+
+
+
 <style type="text/css">
   
   h1 {
@@ -46,8 +73,8 @@
   div{
     color: white;
     position: absolute;
-    top: 52%;
-    right: 75%;
+    top: 15%;
+    right: 90%;
     transform: translateY(-50%);
     text-align: left;
   }
@@ -61,44 +88,26 @@
   }
   input{
     position: absolute;
-    top: 47%;
-    right: 39%;
+    top: 19%;
+    right: 83%;
     transform: translateY(-50%);
     text-align: left;
   }
-
-
   ag-grid-angular{ 
     position: absolute;
-    top: 100%;
-    right: 10%;
+    top: 75%;
+    right: 0%;
     transform: translateY(-50%);
     text-align: left;
   }
-
-  ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover {
-  background-color: #111;
-}
+  form{
+    position: absolute;
+    top: 19%;
+    right: 50%;
+    transform: translateY(-50%);
+    text-align: left;
+    color: white;
+  }
 </style>
 
 
