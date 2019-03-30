@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+<script> var __basePath = ''; </script>
+<style> 
+
+    html, body {  
+        margin: 0; 
+        padding: 0; 
+        height: 100%;
+    } 
+    
+</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <script src="https://unpkg.com/ag-grid-enterprise@20.2.0/dist/ag-grid-enterprise.min.js"></script>
+    <script lang="javascript" src="xlsx.full.min.js"></script></head>
+<body>
+
+        <div class="dropdown"id = "drop">
+                <button class="dropbtn">Add</button>
+                <div class="dropdown-content">
+                <a href="#" id = 'addCol'>Add Column</a>
+                <a href="#" id = 'addRow'>Add Row</a>
+                </div>
+        </div>
+
+        <div class="dropdown"id = "importer">
+                <button class="dropbtn">Import</button>
+                <div class="dropdown-content">
+                <a href="#" id = 'imp'>Import File:<input id = "import" type="file" name="somename" size="n" accept=".xlsx, .xls, .csv"></a>
+                </div>
+        </div>
+
+        <div class="dropdown"id = "exported">
+                <button class="dropbtn">Export</button>
+                <div class="dropdown-content">
+                    <a href="#" id = 'exporter'>Export as XLSX</a>
+                    <a href="#" id = 'exportCSV'>Export as CSV</a>
+                </div>
+        </div>
+
+        <div class="dropdown"id = "clearGrid">
+                <button class="dropbtn">Clear</button>
+                <div class="dropdown-content">
+                </div>
+        </div>
+
+    <div id="logo">
+        <img src="bLogo.png" alt="logo" style="width:255px;height:50px;">
+    </div>
+
+    <div id="agLogo">
+            <label>Made with </label>
+    </div>
+
+    <img src="angular-grid.svg" id= "AGlogos" alt="logo" style="width:50px;height:25px;">
+
+        
+
+<div id="whole-table" ng-app="example" ng-controller="exampleCtrl" style="height: 100%">
+    <div ag-grid="gridOptions" class="ag-theme-balham-dark" style="width: 1200px; height: 630px;"></div>
+</div>
+
+
+    <script src="main.js"></script>
+</body>
+</html>
+
+
